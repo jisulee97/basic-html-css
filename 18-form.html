@@ -1,1 +1,54 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>폼 관련 요소</title>
+</head>
+<body>
+  <h1>폼 관련 요소</h1>
+  <form action="서버 URL" method="get">
+    <!-- 연관성 있는 폼 서식 -->
+    <fieldset>
+      <legend>검색</legend>
+      <div>
+        <label for="search">검색어</label>
+        <!-- maxlength : 최대 글자수 옵션
+             minlength : 최소 글자수 옵션
+        -->
+        <input id="search" type="search" maxlength="10" minlength="6" placeholder="검색어"/>
+      </div>
+      
+      <label>
+        검색어
+        <input type="text" />
+      </label>
+    
+      <label for="cardNum">카드번호</label>
+      <input type="text" id="cardNum" aria-label="앞 4자리" />
+      <input type="text" /> -
+      <input type="text" /> -
+      <input type="text" /> -
+    </fieldset>
+  </form>
+  <button type="submit" form="searchForm">검색</button>
+
+  <!-- form 쓸 때는 label이 항상 존재해야 함 -->
+  <div>
+    <label for=""></label>
+    <select name="" id="">
+      <option value=""></option>
+    </select>
+  </div>
+
+  <div>
+    <label for=""></label>
+    <textarea name="" id="" cols="30" rows="10">
+    </textarea>
+  </div>
+
+  <!-- button 기본값 : form이 가지고 있는 url로 이동함 -->
+  <button>전송</button>
+</body>
+</html>
