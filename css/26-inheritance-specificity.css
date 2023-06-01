@@ -1,4 +1,25 @@
 body {
   font-family: "SUIT";
-  font-weight: 300;
+  font-weight: 700;
+}
+
+.menu{
+  color: gray;
+  font-size: 36px;
+  border: 5px green dashed;
+}
+
+/* 상속 되는 속성과 아닌 속성이 있음
+   border는 상속 되지 않는 속성
+*/
+ul.menu li{
+  background-color: pink !important;
+}
+
+ul.menu li.pick{
+  background-color: yellow !important;;
+}
+
+.menu a{
+  color: inherit;
 }
