@@ -3,6 +3,12 @@
   color: inherit;
 }
 
+/* 가상 요소 선택자 */
+::selection {
+  background: #373e6a;
+  color: hotpink;
+}
+
 /* 태그 선택자 */
 body {
   font-family: "SUIT";
@@ -17,6 +23,10 @@ body {
   text-shadow: 4px 4px 3px #77f;
 }
 
+.align{
+  text-align: center;
+}
+
 /* 한칸을 띄우는 것은 ul 밑에 있는 하위선택자들만 적용됨 */
 ul.menu{
 	margin: 0;
@@ -25,5 +35,40 @@ ul.menu{
 }
 
 #demo {
-  border: red 5px solid;
+  border: #0f0 5px solid;
+}
+
+/* 속성 선택자 */
+.menu a[href$=".html"] {
+  background-color: blue;
+}
+
+/* 선택자 목록 */
+.fancy,
+.menu {
+  font-size: 24px;
+}
+
+/* 가상 요소 선택자 */
+.align::before{
+  content: '이전 요소';
+}
+
+.align::after{
+  content: '다음 요소';
+}
+
+/* 가상 클래스 */
+/* odd : 홀수번쨰만 선택
+*/
+.menu li:nth-child(odd){
+  color: yellow;
+}
+
+.menu a:hover{
+  border: 5px solid teal;
+}
+
+h1.menu:hover{
+  background-color: pink;
 }
